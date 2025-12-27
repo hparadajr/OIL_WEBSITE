@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ai-integration.txt — HTML view</title>
+  <style>
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:#f7f8fa;color:#0f172a;margin:0;padding:24px}
+    .card{max-width:960px;margin:24px auto;background:#fff;border:1px solid #e6e9ef;border-radius:10px;padding:18px}
+    pre{background:#f3f4f6;border-radius:8px;padding:12px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+    h1{margin:0 0 8px;font-size:1.1rem}
+    .note{color:#6b7280;font-size:0.95rem;margin-bottom:12px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>ai-integration.txt — HTML view</h1>
+    <p class="note">This file is the HTML version of your `ai integration.txt` content. The script is shown as preformatted text to avoid executing it when opened.</p>
+
+    <pre>&lt;script&gt;
+(function () {
+
+  if (
+    !window.chatbase ||
+    window.chatbase("getState") !== "initialized"
+  ) {
+    window.chatbase = (...arguments) =&gt; {
+      if (!window.chatbase.q) {
+        window.chatbase.q = [];
+      }
+      window.chatbase.q.push(arguments);
+    };
+
+    window.chatbase = new Proxy(window.chatbase, {
+      get(target, prop) {
+        if (prop === "q") {
+          return target.q;
+        }
+        return (...args) =&gt; target(prop, ...args);
+      }
+    });
+  }
+
+  const onLoad = function () {
+    const script = document.createElement("script");
+    script.src = "https://www.chatbase.co/embed.min.js";
+    script.id = "CHATBOT_ID";
+    script.domain = "www.chatbase.co";
+    document.body.appendChild(script);
+  };
+
+  if (document.readyState === "complete") {
+    onLoad();
+  } else {
+    window.addEventListener("load", onLoad);
+  }
+
+})();
+&lt;/script&gt;</pre>
+
+  </div>
+</body>
+</html>
