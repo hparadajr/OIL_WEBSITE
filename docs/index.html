@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OIL_WEBSITE — ai integration.txt</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <h1>OIL_WEBSITE</h1>
+      <p class="subtitle">Preview of <code>ai integration.txt</code></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="file-actions">
+      <a class="btn" href="ai-integration.txt" download>Download TXT</a>
+      <a class="btn" href="ai-integration.txt" target="_blank" rel="noopener">View raw</a>
+      <button id="copy" class="btn">Copy to clipboard</button>
+    </section>
+
+    <section class="file-preview">
+      <pre id="content">Loading content…</pre>
+    </section>
+
+    <footer class="footer">
+      <p>Serve this folder with GitHub Pages (docs/) or locally via <code>python3 -m http.server 8000</code>.</p>
+    </footer>
+  </main>
+
+  <script>
+  async function load() {
+    try {
+      const res = await fetch('ai-integration.txt');
+      if (!res.ok) throw new Error('Failed to fetch file');
+      const text = await res.text();
+      const pre = document.getElementById('content');
+      // Escape HTML so scripts don't run
+      pre.textContent = text;
+
+      document.getElementById('copy').addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(text);
+          const btn = document.getElementById('copy');
+          btn.textContent = 'Copied ✓';
+          setTimeout(() => btn.textContent = 'Copy to clipboard', 1500);
+        } catch (err) {
+          alert('Copy failed: ' + err);
+        }
+      });
+    } catch (err) {
+      document.getElementById('content').textContent = 'Error loading file: ' + err;
+    }
+  }
+  load();
+  </script>
+</body>
+</html>
