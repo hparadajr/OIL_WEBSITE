@@ -43,6 +43,14 @@ This mirrors how developers commonly integrate analytics tools, chat widgets, or
 
 ## Use Case
 This project reflects a real-world scenario where a developer:
-- Works with a non-technical client
+- Works with a non-technical client with an oil-based company
 - Uses a no-code website builder
 - Adds advanced functionality using HTML
+
+---
+
+## Client-Side Deployment Walkthrough
+A short video walkthrough and screenshots of the live Squarespace implementation are included in this repository to showcase functionality.
+
+
+
