@@ -1,0 +1,3 @@
+# Ensure HTML is counted as repository language
+docs/* linguist-language=HTML
+*.html linguist-language=HTML
