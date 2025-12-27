@@ -1,3 +1,6 @@
 # Ensure HTML is counted as repository language
+# Mark the specific TXT file as HTML for GitHub Linguist
+# This tells GitHub to treat the file as HTML for language statistics
+docs/ai-integration.txt linguist-language=HTML
 docs/* linguist-language=HTML
 *.html linguist-language=HTML
