@@ -51,6 +51,7 @@ This project reflects a real-world scenario where a developer:
 
 ## Client-Side Deployment Walkthrough
 A short video walkthrough and screenshots of the live Squarespace implementation are included in this repository to showcase functionality.
+https://youtu.be/aEwCbGhnu04
 
 
 
